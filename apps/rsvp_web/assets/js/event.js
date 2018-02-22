@@ -1,13 +1,16 @@
 import socket from './socket'
 (function() {
-    const id = document.getElementById('id').dataset.id
-    if (!id) { return }
+    if (document.getElementById('id')) {
+        const id = document.getElementById('id').dataset.id || undefined
+    } else {
+        return
+    }
 
     const channel = socket.channel("event:" + id, {})
 
     // update
     channel.on("update_quantity", event => {
-        console.log("Update", event)
+        // console.log("Update", event)
         document.getElementById('quantity').textContent = event.quantity
     })
 
