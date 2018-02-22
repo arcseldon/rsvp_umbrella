@@ -15,10 +15,10 @@ use Mix.Config
 # which you typically run after static files are built.
 config :rsvp_web, RsvpWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "example.com", port: 80],
+  url: [host: "blooming-falls-81465.herokuapp.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
-  
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
